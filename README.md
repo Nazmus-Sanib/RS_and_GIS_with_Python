@@ -7,4 +7,5 @@
 
 # Drawback of the python to do GIS analysis:
 #      1. Computation power is not good enough for big data structure
-#      2. Python should not use, if the size of the data file exceed 250MB.
+#      2. File of more than 250 MB size can be read by the following code: 
+          files = [i for i in geopandas.read_file("tmp.shp", chunksize=10)]
